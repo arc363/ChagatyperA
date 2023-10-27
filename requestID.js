@@ -24,16 +24,3 @@ module.exports = {
   args,
   requestID,
 };
-// // Create folder with UUID as name
-// const fs = require(`fs`);
-
-// if (!fs.existsSync(`./${requestID}`)) {
-//   fs.mkdir(`./${requestID}`, (err) => {
-//     if (err) {
-//       console.log(err);
-//     }
-//     console.log(`Folder created`);
-//   });
-// } else {
-//   console.log(`Folder already exists`);
-// }
