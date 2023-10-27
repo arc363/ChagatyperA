@@ -1,5 +1,6 @@
 const fs = require(`fs`);
-const { args, requestID } = require(`./requestID`);
+const { args, requestID, valid, validate } = require(`./requestID`);
+const {} = require(`./check_json.js`);
 
 if (!fs.existsSync(`./${requestID}`)) {
   fs.mkdir(`./${requestID}`, (err) => {

@@ -1,7 +1,8 @@
 Get id from run time parameters
 Check uploads folder exists
-Look for json file named the same as the id in the folder
-Read the json into a variable
+Look for json file named the same as the id in the folder - use fs.read
+Read the json into a variable - one line!
+// database portion
 open database connection
 Run command to insert the data and set the status
-Close connection 
+Close connection

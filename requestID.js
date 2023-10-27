@@ -8,8 +8,6 @@ if (args.id) {
 
 const validate = require("uuid-validate");
 
-// const arg = process.argv.slice(2);
-
 const valid = validate(args.id);
 
 if (!valid) {
@@ -22,5 +20,7 @@ console.log(`Request ID: ${requestID}`);
 
 module.exports = {
   args,
+  validate,
+  valid,
   requestID,
 };
