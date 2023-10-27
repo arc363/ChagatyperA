@@ -1,0 +1,7 @@
+Get id from run time parameters
+Check uploads folder exists
+Look for json file named the same as the id in the folder
+Read the json into a variable
+open database connection
+Run command to insert the data and set the status
+Close connection 
