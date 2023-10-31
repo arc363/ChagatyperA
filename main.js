@@ -53,8 +53,8 @@ function checkJson(id) {
     console.log(`JSON file located`);
   }
 }
-
-// Read the json into a variable - one line!
+/*
+// Read the json into a variable
 readInData(requestID);
 function readInData(id) {
   return fs.readFile(
@@ -70,7 +70,7 @@ function readInData(id) {
 }
 
 // // database portion
-import { Pool } from "pg"; // pg is the postgres database client package
+const pool = require("pg"); // pg is the postgres database client package
 
 // This configures our connection pool
 export const pool = new Pool({
@@ -102,7 +102,7 @@ export async function uploadSubmission(id, jsonData) {
     client.release();
   }
 }
-
+*/
 // open database connection
 // Run command to insert the data and set the status
 // Close connection
