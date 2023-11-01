@@ -1,7 +1,13 @@
-const args = require("args-parser")(process.argv);
-const path = require("path");
-const fs = require(`fs`);
-const pg = require("pg"); // pg is the postgres database client package
+import argsParser from "args-parser";
+const args = argsParser(process.argv);
+import path from "path";
+import fs from "fs";
+import pg from "pg"; // pg is the postgres database client package
+import validate from "uuid-validate";
+
+import * as url from "url";
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 // This configures our connection pool
 const pool = new pg.Pool({
@@ -27,8 +33,6 @@ if (args.id) {
 // Validate parameter
 const requestID = validateID(args.id);
 function validateID(id) {
-  const validate = require("uuid-validate");
-
   const valid = validate(id);
 
   if (!valid) {
