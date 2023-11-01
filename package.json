@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Simple tool to generate SQL inserts from a html list copied from https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi.",
   "main": "main.js",
-  "type": "module"
   "scripts": {
     "start": "node main.js",
     "debug": "node read_json.js -id=3c9712ce-9c5c-4969-b30f-a0bbdcddacf8"
@@ -12,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "args-parser": "^1.3.0",
+    "pg": "^8.11.3",
     "uuid-validate": "^0.0.3"
   }
 }
