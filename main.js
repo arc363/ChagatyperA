@@ -59,19 +59,6 @@ function uploadFolder(id) {
 }
 
 // Look for json file named the same as the id in the folder - use fs.read
-checkJson(requestID);
-function checkJson(id) {
-  if (!fs.existsSync(`./${requestID}.json`)) {
-    fs.readdir(`./${requestID}.json`, (err) => {
-      if (err) {
-        // console.log(err);
-      }
-      console.log(`Failed to locate JSON file`);
-    });
-  } else {
-    console.log(`JSON file located`);
-  }
-}
 
 // Read the json into a variable IF the corresponding JSON file was located
 if (fs.existsSync(`./${requestID}.json`)) {
